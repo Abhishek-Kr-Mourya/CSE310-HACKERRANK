@@ -1,0 +1,51 @@
+//Q1
+
+import java.io.*;
+import java.util.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+        /* Enter your code here. Read input from STDIN. Print output to STDOUT. Your class should be named Solution. */
+        Scanner input = new Scanner(System.in);
+        int k =input.nextInt();
+        int facto = 1;
+        if(k<=10 && k>0){
+        for(int j = 1;j<=k;j++)
+        {
+            facto = facto*j;
+        }
+        System.out.println(facto);
+    }
+    }
+}
+
+//Q2
+
+import java.io.*;
+import java.util.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+        /* Enter your code here. Read input from STDIN. Print output to STDOUT. Your class should be named Solution. */
+        Scanner input=new Scanner(System.in);
+        int k=input.nextInt();
+        String arr1[]=new String[k];
+        for(int j=0;j<k;j++)
+        {
+            arr1[j]=input.next();
+        }
+        
+        int flag1=0;
+        for(int m=0;m<k;m++)
+        {
+           if(arr1[m].matches(".*[0-9].*"))
+           {
+               flag1++;
+           }
+        }
+        System.out.println(flag1 );
+        System.out.println(k-flag1);
+    }
+}
