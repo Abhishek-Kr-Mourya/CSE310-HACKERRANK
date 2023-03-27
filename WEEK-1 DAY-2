@@ -1,0 +1,65 @@
+//Q1
+
+import java.io.*;
+import java.util.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+        /* Enter your code here. Read input from STDIN. Print output to STDOUT. Your class should be named Solution. */
+         int number,mid,flag;
+        Scanner input=new Scanner(System.in);
+        number=input.nextInt();
+        mid=number/2;
+        flag=0;
+        if(number>0)
+        {
+            
+        if(number==0 || number==1)
+        {
+            System.out.println("Non Prime Number");
+        }
+        else{
+            for(int i=2;i<=mid;i++)
+            {
+                if(number%i==0)
+                {
+                    System.out.println("Not Prime Number");
+                    flag=1;
+                    break;
+                }
+            }
+        }
+        if(flag==0)
+        {
+            System.out.println("Prime Number");
+        }
+    }
+    }
+}
+
+//Q2
+
+import java.io.*;
+import java.util.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+        /* Enter your code here. Read input from STDIN. Print output to STDOUT. Your class should be named Solution. */
+        int number1,number2,number3;
+        Scanner input=new Scanner(System.in);
+        number1=input.nextInt();
+        number2=input.nextInt();
+        number3=input.nextInt();
+        if(number1<number2){
+        for (int i = number1; i <= number2; i++) {
+            if(i%number3==0)
+            System.out.print(i+" ");
+        }
+        }
+        else{
+        System.out.println("Invalid Input");
+        }
+    }
+}
