@@ -1,0 +1,92 @@
+//Q1
+
+import java.io.*;
+import java.util.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+        /* Enter your code here. Read input from STDIN. Print output to STDOUT. Your class should be named Solution. */
+        Scanner input=new Scanner(System.in);
+        int n1=input.nextInt();
+        if(n1>0 && n1<8)
+        {
+        
+        int arr1[]=new int[n1];
+        for(int i=0;i<n1;i++)
+        {
+            arr1[i]=input.nextInt();
+        }
+        int res=0;
+        for(int j=0;j<n1;j++)
+        {
+            res+=arr1[j];
+        }
+        double per=res/n1;
+        String grade;
+        if(per>90)
+        {
+            grade="A+";
+        }
+        else if((per>=70) && (per<=89))
+        {
+            grade="A";
+        }
+         else if((per>=60) && (per<=69))
+        {
+            grade="B";
+        }
+         else if((per>=50) && (per<=59))
+        {
+            grade="C";
+        }
+        else{
+            grade="D";
+        }
+        System.out.println(grade);
+        }
+        else{
+            System.out.println("Invalid");
+        }
+    }
+}
+
+//Q2
+
+import java.io.*;
+import java.util.*;
+
+public class Solution
+{
+public static boolean isbigger(int a1,int b1)
+{
+    if(a1>b1)
+    {
+        return true;
+    }
+    else
+    {
+        return false;
+    }
+    
+}
+    public static void main(String[] args) 
+    {
+     Scanner input=new Scanner(System.in);
+        int a1=input.nextInt();
+        int b1=input.nextInt();
+      if(a1>10 && b1>10 && a1<1000 && b1<1000){ 
+          if(isbigger(a1,b1)==true)
+          {
+            System.out.println("true");
+        }else
+          {
+            System.out.println("false");
+        }
+      }
+        else
+      {
+          System.out.println("Invalid Input");
+      }
+    }
+}
