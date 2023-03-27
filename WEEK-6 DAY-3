@@ -1,0 +1,78 @@
+//Q1
+
+import java.io.*;
+import java.util.*;
+import java.text.*;
+import java.math.*;
+import java.util.regex.*;
+class student{
+    String name,name1;
+    
+    void display_name()
+    {
+        System.out.println(name);
+        
+    }
+    void display_name1()
+    {
+        System.out.println(name1);
+    }
+    
+}
+public class Solution {
+
+    public static void main(String[] args) 
+    {
+        Scanner input = new Scanner(System.in);
+        String str1 = input.next();
+        String str2 = input.next();
+        student s1 = new student();
+        if(str1.charAt(0)>='A' && str1.charAt(0)<='z')
+        {
+            s1.name=str1;
+            s1.display_name();
+        }
+        else
+        {
+            System.out.print("Unknown");
+        }
+        if(str2.charAt(0)>='A' && str2.charAt(0)<='z')
+        {
+            s1.name1=str2;
+            s1.display_name1();
+        }
+        else
+        {
+            System.out.print("Unknown");
+        }
+    }
+}
+
+//Q2
+
+import java.io.*;
+import java.util.*;
+import java.text.*;
+import java.math.*;
+import java.util.regex.*;
+
+public class Solution {
+    public static void main(String args[] ){
+        Scanner sc = new Scanner(System.in);
+        int []arr = new int[10];
+        for(int i=0;i<10;i++) 
+            arr[i] = sc.nextInt();
+        
+        for(int i=0; i<10; i++){
+            for(int j=0;j<(9-i);j++){
+                if(arr[j] > arr[j+1]) {
+                    int temp = arr[j];
+                    arr[j] = arr[j+1];
+                    arr[j+1] = temp;
+                }
+            }
+        }
+        for(int i=0; i<10; i++)
+            System.out.print(arr[i] + " ");
+    }
+}
