@@ -1,0 +1,58 @@
+//Q1
+
+import java.io.*;
+import java.util.*;
+import java.text.DecimalFormat;
+
+public class Solution {
+
+    public static void main(String[] args) {
+     Scanner sc=new Scanner(System.in);
+        float balance=sc.nextFloat();
+        int number=sc.nextInt();
+         DecimalFormat df = new DecimalFormat("#.00");
+        switch(number){
+            case 1: float amountWithdrawn=sc.nextFloat();
+                if(amountWithdrawn>balance){
+                    System.out.println("Error");
+                }else{
+                   
+                    balance =balance-amountWithdrawn;
+                    System.out.println(df.format(balance));
+                }
+                break;
+            case 2: float amountDeposited=sc.nextFloat();
+                     balance=balance+amountDeposited;
+                System.out.println(df.format(balance));
+                break;
+            case 3: System.out.println(df.format(balance));
+                break;
+            default:System.out.println("Error");
+        }
+    
+    }
+}
+
+//Q2
+
+import java.util.*;
+public class Solution
+{
+    public static void main(String[]args)
+    {
+    Scanner sc = new Scanner(System.in);
+    int b = sc.nextInt();
+    if(b<100 && b>=0)
+    {
+        for(int i = 0; i<=b; i++)
+        {
+            System.out.println(i);
+        }
+        System.out.println("Games End");
+    }
+    else
+    {
+        System.out.println("Invalid Input");
+    }
+  }
+}
