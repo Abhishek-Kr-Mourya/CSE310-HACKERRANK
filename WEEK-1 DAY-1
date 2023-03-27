@@ -1,3 +1,5 @@
+//Q1
+
 import java.io.*;
 import java.util.*;
 
@@ -15,5 +17,29 @@ public class Solution {
         else{
         System.out.println("Invalid Input");
         }
+    }
+}
+
+
+//Q2
+import java.io.*;
+import java.util.*;
+import java.text.*;
+import java.math.*;
+import java.util.regex.*;
+
+public class Main{
+
+    public static void main(String[] args) {
+        /* Enter your code here. Read input from STDIN. Print output to STDOUT. Your class should be named Solution. */
+        float number1,number2,number3,avg;
+        Scanner input=new Scanner(System.in);
+        number1=input.nextFloat();
+        number2=input.nextFloat();
+        number3=input.nextFloat();
+        avg=(number1+number2+number3)/3;
+        DecimalFormat fspace = new DecimalFormat("#.#");
+        fspace.setRoundingMode(RoundingMode.FLOOR);
+        System.out.println(fspace.format(avg));
     }
 }
