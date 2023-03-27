@@ -1,0 +1,67 @@
+//Q1
+
+import java.io.*;
+import java.util.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+        /* Enter your code here. Read input from STDIN. Print output to STDOUT. Your class should be named Solution. */
+        Scanner sc = new Scanner(System.in);
+        int row = sc.nextInt();
+        double arr1[][] = new double[row][];
+        
+        for(int i=0;i<row;i++){
+            int col = sc.nextInt();
+            arr1[i] = new double[col];
+            for(int j=0;j<col;j++){
+                arr1[i][j] = sc.nextDouble();
+            }
+            
+        }
+        int n = sc.nextInt();
+        double s = 0;
+        for(int i=0;i<arr1[n-1].length;i++){
+            s= s+ arr1[n-1][i];
+        }
+        
+        double avg = s/arr1[n-1].length;
+        System.out.print("Average in Subject-"+n+" is "+ avg);
+        
+        
+        
+        
+    }
+}
+
+//Q2
+
+import java.io.*;
+import java.util.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+        /* Enter your code here. Read input from STDIN. Print output to STDOUT. Your class should be named Solution. */
+        Scanner sc = new Scanner(System.in);
+        String str[] = new String[4];
+        String str2[] = new String[4];
+        for(int i=0;i<4;i++){
+            str[i] = sc.next();
+        }
+        for(int i=0;i<4;i++){
+            str2[i] = sc.next();
+        }
+        int cont=0;
+        for(int i=0;i<4;i++){
+            for(int j=0;j<4;j++){
+                if(str[i].equals(str2[j])){
+                    cont++;
+                }
+            }
+        }
+        System.out.print(cont);
+        
+        
+    }
+}
