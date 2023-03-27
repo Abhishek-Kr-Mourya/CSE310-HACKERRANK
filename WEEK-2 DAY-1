@@ -1,0 +1,54 @@
+//Q1
+
+import java.io.*;
+import java.util.*;
+import java.text.*;
+import java.math.*;
+import java.util.regex.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+        /* Enter your code here. Read input from STDIN. Print output to STDOUT. Your class should be named Solution. */
+        int code;
+        Scanner input=new Scanner(System.in);
+        code=input.nextInt();
+        int sum=0;
+        int n=0;
+        while(code>0){
+            int temp=code%10;
+            sum+= temp*Math.pow(2, n);
+            code=code/10;
+            n++;
+        }
+        if(sum>=65 && sum<=90){
+            System.out.println((char)sum);
+        }
+        else{
+            System.out.println("INVALID PAPER CODE");
+        }
+        
+    }
+}
+
+//Q2
+
+import java.io.*;
+import java.util.*;
+import java.text.*;
+import java.math.*;
+import java.util.regex.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+        /* Enter your code here. Read input from STDIN. Print output to STDOUT. Your class should be named Solution. */
+        int a,b;
+        Scanner input=new Scanner(System.in);
+        a=input.nextInt();
+        b=input.nextInt();
+        int sum=a+b;
+        System.out.println(sum);
+    }
+}
+
