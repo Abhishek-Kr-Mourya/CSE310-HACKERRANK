@@ -1,0 +1,19 @@
+import java.io.*;
+import java.util.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+        /* Enter your code here. Read input from STDIN. Print output to STDOUT. Your class should be named Solution. */
+        int number1,number2;
+        Scanner input=new Scanner(System.in);
+        number1=input.nextInt();
+        number2=input.nextInt();
+        if(number1>0 && number2>0){
+        System.out.println(number1+"-"+number2);
+        }
+        else{
+        System.out.println("Invalid Input");
+        }
+    }
+}
