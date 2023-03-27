@@ -1,0 +1,59 @@
+//Q1
+
+import java.io.*;
+import java.util.*;
+import java.text.*;
+import java.math.*;
+import java.util.regex.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+        /* Enter your code here. Read input from STDIN. Print output to STDOUT. Your class should be named Solution. */
+        int four,six;
+        Scanner input=new Scanner(System.in);
+        four=input.nextInt();
+        six=input.nextInt();
+        int total;
+        total=(four*4+six*6);
+        System.out.println(total);
+    }
+}
+
+//Q2
+
+import java.io.*;
+import java.util.*;
+import java.text.*;
+import java.math.*;
+import java.util.regex.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+        /* Enter your code here. Read input from STDIN. Print output to STDOUT. Your class should be named Solution. */
+        int bal=20000;
+        Scanner input=new Scanner(System.in);
+        long accountno=input.nextLong();
+        input.nextLine();
+        String name=input.nextLine();
+        String gen2;
+        char gen=input.next().charAt(0);
+        int amount=input.nextInt();
+        if (gen=='M'){
+            gen2="Mr.";
+        }
+        else{
+            gen2="Ms.";
+        }
+        if(amount>20000 || amount<0){
+            System.out.println("Hi "+gen2+" "+name+"!");
+            System.out.println("Insufficient Funds! You can not withdraw "+amount+".");
+        }
+        else{
+            int curamount=bal-amount;
+            System.out.println("Hi "+gen2+" "+name+"!");
+            System.out.println("Your Account Balance after withdrawl is "+curamount+".");
+        }
+    }
+}
