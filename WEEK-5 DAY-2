@@ -1,0 +1,87 @@
+//Q1
+
+import java.io.*;
+import java.util.*;
+import java.text.*;
+import java.math.*;
+import java.util.regex.*;
+
+public class Solution 
+{
+
+    public static void main(String[] args)
+    {
+        /* Enter your code here. Read input from STDIN. Print output to STDOUT. Your class should be named Solution. */
+        Scanner sc = new Scanner(System.in);
+        int numa = sc.nextInt();
+        int numb = sc.nextInt();
+        int numc = sc.nextInt();
+        int numd = sc.nextInt();
+        
+        int mul_real = (numa*numc) - (numb*numd);
+        int mul_img = (numa*numd) + (numb*numc);
+        if(mul_img>=0)
+        {
+            System.out.print(mul_real+"+"+mul_img+"i");
+        }
+        else
+        {
+            System.out.print(mul_real+mul_img+"i");
+        }
+        
+        
+        
+    }
+}
+
+
+//Q2
+
+
+import java.io.*;
+import java.util.*;
+import java.text.*;
+import java.math.*;
+import java.util.regex.*;
+
+class circle1{
+    double radi;
+    double a;
+    public circle1(double r)
+    {
+        radi=r;
+    }
+    
+    double getArea()
+    {
+        a = (radi*radi)*(3.14);
+        return a;
+    }
+    
+}
+public class Solution 
+{
+
+    public static void main(String[] args) 
+    {
+        /* Enter your code here. Read input from STDIN. Print output to STDOUT. Your class should be named Solution. */
+        Scanner sc = new Scanner(System.in);
+        int n = sc.nextInt();
+        circle1 c[] = new circle1[n];
+        for(int i=0;i<n;i++)
+        {
+            double r = sc.nextDouble();
+            c[i] = new circle1(r);
+        }
+        for(int i=0;i<n;i++)
+        {
+            double a = c[i].getArea();
+            if(a>=30)
+            {
+                System.out.printf("%.4f",c[i].getArea());
+                
+            }
+        }
+        
+    }
+}
