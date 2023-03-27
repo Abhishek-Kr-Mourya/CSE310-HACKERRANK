@@ -1,0 +1,47 @@
+//Q1
+
+import java.io.*;
+import java.util.*;
+import java.text.*;
+import java.math.*;
+import java.util.regex.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+        /* Enter your code here. Read input from STDIN. Print output to STDOUT. Your class should be named Solution. */
+        int z;
+        Scanner input=new Scanner(System.in);
+        z=input.nextInt();
+        if(z>=0){
+            System.out.println((Double.valueOf(z)));
+        }
+        else{
+            System.out.println("Invalid Input");
+        }
+    }
+}
+
+//Q2
+
+import java.io.*;
+import java.util.*;
+import java.text.*;
+import java.math.*;
+import java.util.regex.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+        /* Enter your code here. Read input from STDIN. Print output to STDOUT. Your class should be named Solution. */
+        float z;
+        Scanner input=new Scanner(System.in);
+        z=input.nextFloat();
+        if(z>0 && z<=5){
+            System.out.println("Thanks");
+        }
+        else{
+            System.out.println("Error: 101");
+        }
+    }
+}
