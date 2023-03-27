@@ -1,0 +1,75 @@
+//Q1
+
+import java.io.*;
+import java.util.*;
+import java.text.*;
+import java.math.*;
+import java.util.regex.*;
+import java.util.Arrays;
+
+public class Solution {
+
+    public static void main(String[] args) {
+        /* Enter your code here. Read input from STDIN. Print output to STDOUT. Your class should be named Solution. */
+        
+        Scanner kl= new Scanner(System.in);
+        int N=kl.nextInt();
+        
+        if(N<0)
+        {
+            System.out.println("Invalid Array Elements");
+           return;
+            
+        }
+        int arr[]=new int[N];
+        for(int i=0;i<N;i++){
+            arr[i]=kl.nextInt();
+            if(arr[i]<0)
+            {
+                 System.out.println("Invalid Array Size");
+                break;
+            }
+            
+        }
+        Arrays.sort(arr);
+        if(arr.length<2)
+        {
+             System.out.println("Invalid Array Elements");
+        }
+        else{
+            int secl=arr[arr.length-2];
+             System.out.println(secl);
+        }
+    }
+}
+
+//Q2
+
+import java.io.*;
+import java.util.*;
+import java.text.*;
+import java.math.*;
+import java.util.regex.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+        /* Enter your code here. Read input from STDIN. Print output to STDOUT. Your class should be named Solution. */
+        Scanner kl=new Scanner(System.in);
+        int n=kl.nextInt();
+        int arrd1[]= new int[n];
+        int arrd2[]=new int[n];
+        for(int i=0;i<n;i++)
+        {
+            arrd1[i]=kl.nextInt();
+            System.out.print(arrd1[i]+" ");
+        }
+         System.out.println();
+        for(int i=0;i<n;i++)
+        {
+            arrd2[i]=arrd1[i];
+            System.out.print(arrd2[i]+" ");
+        }
+        
+    }
+}
