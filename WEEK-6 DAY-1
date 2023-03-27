@@ -1,0 +1,72 @@
+//Q1
+
+import java.io.*;
+import java.util.*;
+import java.text.*;
+import java.math.*;
+import java.util.regex.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+        Scanner input=new Scanner(System.in);
+        ArrayList<Integer> al = new ArrayList<>();
+        int a1=input.nextInt();
+        int x1 = 2;
+        if(a1>=10 && a1<=50){
+            for(int i1=2;i1<=a1;i1++){
+                if(a1%i1 == 0){
+                    x1 = i1;
+                    break;
+                }
+            }
+            while(a1 != 1){
+            while(a1%x1 == 0){
+                al.add(x1);
+                a1/=x1;
+                
+            }
+                x1++;
+            }
+            for(int r : al){
+                System.out.print(r+" ");
+            }
+        }
+        else{
+            System.out.println("Invalid");
+        }
+    }
+}
+
+
+//Q2
+
+import java.io.*;
+import java.util.*;
+import java.text.*;
+import java.math.*;
+import java.util.regex.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+        Scanner input=new Scanner(System.in);
+        int a1=input.nextInt();
+        if(a1<=0){
+            System.out.println("Invalid");
+        }
+        else{
+        String arr1[] = new String[a1];
+        int alp = 0, dig = 0;
+        for(int i1=0;i1<a1;i1++){
+            arr1[i1] = input.next();
+            if(arr1[i1].charAt(0)>= '0' && arr1[i1].charAt(0) <= '9') dig++;
+            else alp++;
+        }
+        
+        System.out.println(dig +" \n"+alp);
+        }
+        
+        
+    }
+}
