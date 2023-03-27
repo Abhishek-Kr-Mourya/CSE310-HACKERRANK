@@ -1,0 +1,106 @@
+//Q1
+
+import java.io.*;
+import java.util.*;
+import java.text.*;
+import java.math.*;
+import java.util.regex.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+        /* Enter your code here. Read input from STDIN. Print output to STDOUT. Your class should be named Solution. */
+        Scanner input=new Scanner(System.in);
+        int row=input.nextInt();
+        int arr[][]=new int[row][2];
+        if(row>=1 & row<=10){
+            for(int i=0;i<row;i++){
+                for(int j=0;j<2;j++){
+
+                    int l = input.nextInt();
+                    if(j==0){
+                        if(l<=1000 & l>=1){  // 10 <= id <= 1000 ;
+                            arr[i][j]=l;
+                        }
+                        else{
+                            System.out.println("Invalid data");
+                        }
+                    }
+                    if(j==1){
+                        if(l<=50 & l>=18){  //  18 <= age <= 50
+                            arr[i][j]=l;
+                        }
+                        else{
+                            System.out.println("Invalid data");
+                        }
+                    }
+                }
+            }
+            for(int k=0;k<row;k++){
+                if(arr[k][1]<30){
+                    System.out.println(arr[k][0]+" "+arr[k][1]);
+                }
+            }
+        }
+        else{
+            System.out.println("Invalid input");
+        }
+    
+    }
+}
+
+//Q2
+
+import java.io.*;
+import java.util.*;
+import java.text.*;
+import java.math.*;
+import java.util.regex.*;
+
+public class Solution {
+    static int removeDuplicates(int array[], int a)
+    {
+        if (a == 0 || a == 1)
+            return a;
+        int m = 0;
+        for (int n = 0; n < a-1; n++)
+            if (array[n] != array[n+1])
+                array[m++] = array[n];
+       
+        array[m++] = array[a-1];
+       
+        return m;
+    }
+
+    public static void main(String[] args) {
+        
+        Scanner input = new Scanner(System.in);
+        int a = input.nextInt();
+        if (a >= 5 && a <= 15) {
+            int array[] = new int[a];
+            for (int n = 0; n < a; n++) {
+                array[n] = input.nextInt();
+            }
+            int choice = input.nextInt();
+            if (choice == 1) {
+                Arrays.sort(array);
+                a=removeDuplicates(array, a);
+                for(int i=0;i<a;i++){
+                    System.out.print(array[i]+" ");
+                }
+                
+            } else if (choice == 2) {
+                Arrays.sort(array);
+                a=removeDuplicates(array,a);
+                for (int i = a - 1; i > 0; i--) {
+                    System.out.print(array[i] + " ");
+                }
+
+            } else {
+                System.out.print("Invalid Input");
+            }
+        } else {
+            System.out.print("Invalid");
+        }
+    }
+} 
