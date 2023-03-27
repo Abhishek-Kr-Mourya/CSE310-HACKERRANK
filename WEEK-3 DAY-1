@@ -1,0 +1,50 @@
+//Q1
+
+import java.io.*;
+
+import java.util.Scanner;
+
+public class Solution { 
+
+    public static void main(String[] args) {
+
+        Scanner sc= new Scanner(System.in);
+
+        String str=sc.nextLine();
+
+        char c= sc.next().charAt(0);
+
+        int count=0;
+
+        for(int i=0;i<str.length();i++){
+
+            if(str.charAt(i)==c){
+
+                count++;
+
+            }
+
+        }
+
+        System.out.print(count);
+
+    }
+
+}
+
+//Q2
+
+import java.io.*;
+import java.util.Scanner;
+public class Solution { 
+    public static void main(String[] args) {
+        Scanner sc= new Scanner(System.in);
+        int rs=sc.nextInt();
+        int inter=rs/10;
+        int total=rs+inter;
+        float emi= total/12;
+        float emi1=emi+0.33f;
+        System.out.println(total);
+        System.out.print(String.format("%.2f",emi1));
+    }
+}
