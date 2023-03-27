@@ -1,0 +1,78 @@
+//Q1
+
+import java.io.*;
+import java.util.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+        /* Enter your code here. Read input from STDIN. Print output to STDOUT. Your class should be named Solution. */
+        Scanner sc = new Scanner(System.in);
+        int num = sc.nextInt();
+        int arr[] = new int[num];
+        int sum =0;
+        for(int i=0;i<num;i++){
+            arr[i] = sc.nextInt();
+        }
+        for(int i =0; i<num;i++){
+            sum=sum+arr[i];
+        }
+        System.out.print(sum);
+    }
+}
+
+//Q2
+
+import java.io.*;
+import java.util.*;
+
+enum Days{
+    Monday,
+    Tuesday,
+    Wednesday,
+    Thursday,
+    Friday,
+    Saturday;
+}
+
+public class Solution {
+
+    public static void main(String[] args) {
+        /* Enter your code here. Read input from STDIN. Print output to STDOUT. Your class should be named Solution. */
+        Scanner sc = new Scanner(System.in);
+        String str = sc.nextLine();
+        if(str.equals("Monday") || str.equals("Tuesday") || str.equals("Wednesday") || str.equals("Thursday") || str.equals("Friday") || str.equals("Saturday")){
+            Days d = Days.valueOf(str);
+            
+            switch (d){
+                case Monday:{
+                    System.out.print("8:30 5:30");
+                    break;
+                }
+                    case Tuesday:{
+                    System.out.print("8:30 5:30");
+                    break;
+                }
+                case Wednesday:{
+                    System.out.print("8:30 5:30");
+                    break;
+                }
+                case Thursday:{
+                    System.out.print("8:30 5:30");
+                    break;
+                }
+                case Friday:{
+                    System.out.print("8:30 5:30");
+                    break;
+                }
+                case Saturday:{
+                    System.out.print("9:30 4:30");
+                    break;
+                }
+            }
+        }
+        else{
+            System.out.print("Library is closed");
+        }
+    }
+}
