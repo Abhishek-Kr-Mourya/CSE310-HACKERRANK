@@ -1,0 +1,60 @@
+//Q1
+
+import java.io.*;
+import java.util.*;
+import java.text.*;
+import java.math.*;
+import java.util.regex.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+        /* Enter your code here. Read input from STDIN. Print output to STDOUT. Your class should be named Solution. */
+        double temp;
+        Scanner input=new Scanner(System.in);
+        int choice;
+        choice=input.nextInt();
+        if(choice==1){
+            temp=input.nextDouble();
+            Double restemp=((temp-32)*5/9); 
+            System.out.printf("%.2f",restemp);
+        }
+        else if(choice==2){
+            temp=input.nextDouble();
+            Double restemp=(temp*9/5)+32;  
+            System.out.println(restemp);
+        }
+        else{
+            System.out.println("INVALID CHOICE");
+        }
+        
+    }
+}
+
+//Q2
+
+import java.io.*;
+import java.util.*;
+import java.text.*;
+import java.math.*;
+import java.util.regex.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+        /* Enter your code here. Read input from STDIN. Print output to STDOUT. Your class should be named Solution. */
+         Scanner input=new Scanner(System.in);
+        float total=input.nextInt();
+        float attended=input.nextInt();
+
+        float per=((attended/total)*100);
+        System.out.println((int)per);
+
+        if(per>=75){
+            System.out.println("Yes");
+        }
+        else{
+            System.out.println("No");
+        }
+    }
+}
