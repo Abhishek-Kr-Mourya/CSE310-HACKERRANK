@@ -1,0 +1,59 @@
+//Q1
+
+import java.util.*;
+import java.io.*;
+public class Solution
+{
+    public static void main(String[] arg){
+        int bal=20000;
+        Scanner input=new Scanner(System.in);
+        long accountno=input.nextLong();
+        input.nextLine();
+        String name=input.nextLine();
+        String gen2;
+        char gen=input.next().charAt(0);
+        int amount=input.nextInt();
+        if (gen=='M'){
+            gen2="Mr.";
+        }
+        else{
+            gen2="Ms.";
+        }
+        if(amount>20000 || amount<0){
+            System.out.println("Hi "+gen2+" "+name+"!");
+            System.out.println("Insufficient Funds! You can not withdraw "+amount+".");
+        }
+        else{
+            int curamount=bal-amount;
+            System.out.println("Hi "+gen2+" "+name+"!");
+            System.out.println("Your Account Balance after withdrawl is "+curamount+".");
+        }
+    }
+}
+
+//Q2
+
+import java.io.*;
+import java.util.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+        /* Enter your code here. Read input from STDIN. Print output to STDOUT. Your class should be named Solution. */
+        Scanner input=new Scanner(System.in);
+        int cube;
+        int flag=0;
+        cube=input.nextInt();
+        for(int i=0;i<(cube/2);i++){
+            if (i*i*i==cube){
+                flag++;
+            }
+        }
+        if(flag==1){
+            System.out.println("Perfect Cube");
+        }
+        else{
+            System.out.println("Not Perfect Cube");
+        }
+    }
+}
