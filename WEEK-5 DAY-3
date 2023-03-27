@@ -1,0 +1,55 @@
+//Q1
+
+import java.io.*;
+import java.util.*;
+public class Solution{
+    public static void main(String[] args){
+        Scanner input = new Scanner(System.in);
+        int choose = input.nextInt();
+        switch(choose) {
+            case 1:
+                String nam = input.next();
+                int regno = -1;
+                while(regno<0){
+                    regno = input.nextInt();
+                }
+                if(regno==0)
+                    regno += 1;
+                System.out.print(nam + "," + regno);
+                break;
+            case 2:
+                System.out.print("null,0");
+                break;
+            default: 
+                System.out.print("Wrong Choice");
+        }
+    }
+}
+
+//Q2
+
+import java.io.*;
+import java.util.*;
+
+public class Solution {
+
+    public static void main(String[] args) 
+    {
+       Scanner input=new Scanner(System.in);
+        int empid=input.nextInt();
+        String emp=input.next();
+        String empDes=input.next();
+        int basicSal=20000;
+        
+        if(empid>201)
+        {
+            int sal=basicSal+1000;
+            System.out.println(emp);
+             System.out.println(empid);
+             System.out.println(sal);
+        }else
+        {
+            System.out.println("No Appraisal");
+        }
+    }
+}
