@@ -1,0 +1,34 @@
+//Q1
+
+import java.util.*;
+public class Main
+{
+    public static void main(String[] args) {
+        Scanner sc=new Scanner(System.in);
+        int n=sc.nextInt();
+        for(int i=1;i<=n;i++){
+            for(int j=1;j<=n-i+1;j++){
+                System.out.print(j+" ");
+            }
+            System.out.println();
+        }
+        
+    }
+}
+
+//Q2
+
+import java.io.*;
+import java.util.Scanner;
+public class Solution { 
+    public static void main(String[] args) {
+        Scanner sc= new Scanner(System.in);
+        int rs=sc.nextInt();
+        int inter=rs/10;
+        int total=rs+inter;
+        float emi= total/12;
+        float emi1=emi+0.33f;
+        System.out.println(total);
+        System.out.print(String.format("%.2f",emi1));
+    }
+}
